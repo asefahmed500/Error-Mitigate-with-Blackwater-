@@ -251,7 +251,7 @@ test_noisy_exp_vals = [x[0] for x in test_noisy_exp_vals]
 
 extrapolator = PolynomialExtrapolator(degree=DEGREE)
 zne_strategy, estimator, ob_list_all, shots, circs = get_zne_expval_parallel_single_z(test_circuits, extrapolator,
-                                                                                      BACKEND)
+                                                                                      BACKEND) # type: ignore
 
 def process_circ_ob_list(args):
     i, circ, ob_list = args
